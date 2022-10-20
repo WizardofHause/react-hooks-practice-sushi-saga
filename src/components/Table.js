@@ -1,8 +1,8 @@
 import React from "react";
 
-function Table({ plates = [] }) {
+function Table({ eatenSushis = [] }) {
   // renders an empty plate for every element in the array
-  const emptyPlates = plates.map((_, index) => (
+  const showPlates = eatenSushis.map((_, index) => (
     <div key={index} className="empty-plate" style={{ top: -7 * index }} />
   ));
 
@@ -12,7 +12,7 @@ function Table({ plates = [] }) {
         You have: ${/* Give me how much money I have left */} remaining!
       </h1>
       <div className="table">
-        <div className="stack">{emptyPlates}</div>
+        <div className="stack">{showPlates}</div>
       </div>
     </>
   );
